@@ -1,14 +1,12 @@
 # Lean formalizations of structural constraints for Conway's 99-graph
 
-Two independently developed Lean formalizations accompanying the forthcoming
-article by **Mathieu RANNOU** (mathieu.rannou@imt-atlantique.net).
+Two separately developed Lean formalizations accompanying
+*Triangle Frames and Root-Sparse Lattices for Conway's 99-Graph*
+by **Mathieu RANNOU** (mathieu.rannou@imt-atlantique.net).
 
 **This repository does not resolve Conway's 99-graph problem.** It formalizes
 necessary structural constraints on a hypothetical strongly regular graph with
 parameters `(99, 14, 1, 2)`.
-
-The repository is private while the article is being prepared. Its visibility
-must not be changed without the author's explicit approval.
 
 ## Verified conclusions
 
@@ -105,9 +103,15 @@ are available through a manually triggered workflow, so a push does not
 silently start an expensive proof rebuild. See
 [CONTRIBUTING.md](CONTRIBUTING.md).
 
-The paper title, arXiv identifier and DOI will be added after publication.
-[CITATION.cff](CITATION.cff) currently describes this software companion only.
-Do not cite an unpublished arXiv identifier or claim the Conway problem is solved.
+Please cite the accompanying paper:
+
+> Mathieu RANNOU, *Triangle Frames and Root-Sparse Lattices for Conway's
+> 99-Graph* (2026).
+
+[CITATION.cff](CITATION.cff) provides metadata for this software companion
+and the preferred paper citation. When referring to a particular proof file
+or verification result, identify the development and theorem concerned.
+Neither the paper nor this repository claims to resolve the existence problem.
 
 ## License
 

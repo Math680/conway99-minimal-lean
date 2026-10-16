@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "This metadata describes the software companion; paper citation details will be added after publication."
+message: "Please cite the accompanying paper and this repository when using these formalizations."
 title: "Lean formalizations of structural constraints for Conway's 99-graph"
 type: software
 authors:
@@ -8,5 +8,11 @@ authors:
     email: mathieu.rannou@imt-atlantique.net
 repository-code: "https://github.com/Math680/conway99-minimal-lean"
 license: MIT
-version: 0.1.0
-date-released: 2026-10-16
+preferred-citation:
+  type: article
+  title: "Triangle Frames and Root-Sparse Lattices for Conway's 99-Graph"
+  authors:
+    - family-names: Rannou
+      given-names: Mathieu
+      email: mathieu.rannou@imt-atlantique.net
+  year: 2026

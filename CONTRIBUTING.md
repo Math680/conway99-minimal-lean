@@ -1,6 +1,6 @@
 # Contributing
 
-- Keep the repository private until the author explicitly approves publication.
+- Keep contributions focused on the accompanying paper and its formalizations.
 - Preserve the two projects and pinned toolchains separately.
 - Never replace a proved interface with an added hypothesis in a final theorem.
 - No `sorry`, `admit`, custom axiom, `native_decide`, unsafe proof computation
