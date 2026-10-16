@@ -1,0 +1,153 @@
+import Core
+import SRG
+import Triangles
+import TriangleCount
+import Incidence
+import FourDirections
+import DeltaBound
+import LatticeParity
+import LatticeStructure
+import LatticeDual
+import LatticeRank
+import LatticeDiscriminant
+import LatticeSummary
+import LatticeBidual
+import DiscriminantNondegenerate
+import FiniteWittReduction
+import LatticeLift
+import LatticeDeterminant
+import RootCode
+import RootPartition
+import RootEquitable
+import RootHoffman
+import RootOrthogonality
+import HoffmanCocliques
+import DiscriminantWittLift
+import LiftDeterminant
+import MilgramPhase
+import MilgramTheta
+import MilgramMonodromy
+import MilgramSummability
+import MilgramFiniteGauss
+import MilgramDiscriminantFourier
+import MilgramClassTheta
+import RootRankFour
+import RootSpanRank
+import FourDirectionRootBridge
+import FourDirectionSignedRootBridge
+import FourDirectionOneNeighbors
+import ProfileGlobalBudget
+import ZeroCasePacking
+import ZeroCaseAllPackings
+import ZeroCaseRowEquations
+import FourDirectionOneArcGraph
+import FourDirectionINeighbors
+import DiscriminantGaussWitt
+import FourDirectionOnlyZeroCase
+import ZeroCaseSupportSizes
+import CanonicalDet49Lift
+import ZeroCaseTripleCertificate
+import CoreSignatureRealization
+import CoreSignatureRows
+import ZeroCaseSystemSymmetry
+import ZeroCaseActualHighConfiguration
+import ZeroCaseHighCertificate
+import ZeroCaseResidualGraph
+import MilgramIsotropicAverage
+import MilgramOrthogonalSublattice
+import MinimalConclusions
+import CanonicalDet49LiftComplete
+
+/-!
+Integration of the proved modules. The delta branch and the canonical
+lattice foundations, dual minimum, root biplanes and orthogonality are
+end-to-end. Witt lifting and the determinant/index bridge are proved.
+The determinant-49 existence theorem now uses the fully proved diagonal
+Milgram theorem and exact finite isotropic gluing to the actual canonical
+discriminant; the previous general Poisson property is not an assumption.
+The actual root span has dimension at most three:
+both zero-point cases and every finite-certificate reduction are proved
+end-to-end. The final graph-level theorem has only the SRG parameters as
+its mathematical hypothesis.
+-/
+
+#check Conway99.triangle_count_231
+#check Conway99.Incidence.incidence_product
+#check Conway99.vertexGram_posSemidef
+#check Conway99.diagonal_contraction_divisible_four
+#check Conway99.contraction_total
+#check Conway99.delta_from_gram_data
+#check Conway99.FourDirections.three_labels_force_inverse
+#check Conway99.graph_minimal_delta_conclusions
+#print axioms Conway99.graph_minimal_delta_conclusions
+#check Conway99.rationalAmbient_finrank
+#check Conway99.canonicalLattice_even
+#check Conway99.vertexLattice_le_triangle
+#check Conway99.canonicalDiscriminant_annihilated
+#print axioms Conway99.canonicalDiscriminant_annihilated
+#check Conway99.canonicalLattice_finrank
+#check Conway99.canonicalDiscriminant_finite
+#check Conway99.canonicalDiscriminant_card_power_seven
+#print axioms Conway99.canonicalDual_exponent_seven
+#print axioms Conway99.canonicalLattice_finrank
+#print axioms Conway99.canonicalDiscriminant_card_power_seven
+#check Conway99.graph_canonical_lattice_foundations
+#print axioms Conway99.graph_canonical_lattice_foundations
+#print axioms Conway99.canonicalDiscriminantQuadratic
+#print axioms Conway99.canonicalDiscriminant_polar_nondegenerate
+#print axioms Conway99.canonicalDiscriminant_card_eq_natAbs_integralGramDet
+#print axioms Conway99.seven_exists_large_isotropic
+#print axioms Conway99.canonicalLiftQuotientEquiv
+#print axioms Conway99.integer_eigen_minimum_fourteen
+#print axioms Conway99.canonicalDual_minimum_two
+#print axioms Conway99.canonicalLiftDual_minimum_two
+#print axioms Conway99.canonicalLift_root_biplane
+#print axioms Conway99.canonicalWittLiftData_nonempty
+#print axioms Conway99.canonicalLiftIntegralGram_det_eq49
+#print axioms Conway99.canonicalLift_distinct_root_directions_orthogonal
+#print axioms Conway99.signed_biplane_isolated_card
+#print axioms Conway99.signed_biplane_isolated_adjacency
+#print axioms Conway99.signed_biplane_canonical_hoffman
+#print axioms Conway99.hoffman_coclique_card_le
+#print axioms Conway99.hoffman_coclique_neighbor_count
+#print axioms Conway99.canonicalDual_theta_summable
+#print axioms Conway99.normalizedTwistedFourier_cube
+#print axioms Conway99.milgram44_from_three_point_cycle
+#print axioms Conway99.canonicalDiscriminantFourier_canonical_cube
+#print axioms Conway99.canonicalDiscriminant_gauss_sum_of_poisson
+#print axioms Conway99.canonicalHoffman_pair_root_integral
+#print axioms Conway99.canonicalLift_root_family_card_le_four
+#print axioms Conway99.canonicalLift_rootSubspace_finrank_le_four
+#print axioms Conway99.canonicalLift_four_root_cover
+#print axioms Conway99.FourDirectionSystem.one_zero_weight_profile
+#print axioms Conway99.canonicalLift_root_rank_four_signed_cover
+#print axioms Conway99.FourDirectionSystem.one_zero_triangle
+#print axioms Conway99.profile_six_structural_budget_saturated
+#print axioms Conway99.zero_full_actual_packing_mem
+#print axioms Conway99.zero_case_actual_high_packing_mem
+#print axioms Conway99.FourDirectionSystem.zero_case_row_common_budget
+#print axioms Conway99.OnePointConfiguration.arcPoint_adj_iff
+#print axioms Conway99.canonicalWittLiftData_exact_of_gauss
+#print axioms Conway99.four_directions_one_zero_impossible
+#print axioms Conway99.canonicalLift_rank_four_forces_zero_case
+#print axioms Conway99.FourDirectionSystem.singleClass_card_from_signatures
+#print axioms Conway99.canonicalDet49Lift_of_poisson
+#print axioms Conway99.ZeroCaseTriple.orbit_one_singletons_impossible
+#print axioms Conway99.ZeroCaseTriple.orbit_three_singletons_impossible
+#print axioms Conway99.CoreSignatureData.point_surjective
+#print axioms Conway99.zero_case_exists_normalized_system
+#print axioms Conway99.FourDirectionSystem.actualHighConfiguration
+#print axioms Conway99.ZeroResidual.residual_configuration_impossible
+#print axioms Conway99.FourDirectionSystem.residual_graph_impossible
+#print axioms Conway99.quadratic_phase_isotropic_average
+#print axioms Conway99.canonicalLattice_orthogonal_integral_basis
+#print axioms Conway99.four_directions_zero_impossible
+#print axioms Conway99.canonicalLift_rootSubspace_finrank_le_three
+#print axioms Conway99.graph_delta_and_root_rank
+#print axioms Conway99.graph_det49_and_root_rank_of_poisson
+#print axioms Conway99.canonicalDiscriminant_gauss_sum
+#print axioms Conway99.canonicalDet49Lift
+#check Conway99.graph_minimal_conclusions
+#print axioms Conway99.graph_minimal_conclusions
+#check Conway99.graph_minimal_article_theorem
+#print axioms Conway99.graph_minimal_article_theorem

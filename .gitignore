@@ -1,0 +1,15 @@
+**/.lake/
+**/tools/
+**/*.olean
+**/*.ilean
+**/*.olean.private
+**/*.olean.server
+**/*.trace
+**/*.log
+artifacts/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+.env
+.env.*

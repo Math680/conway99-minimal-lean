@@ -1,0 +1,55 @@
+name = "conway99_minimal_audit"
+version = "0.1.0"
+defaultTargets = ["MinimalAudit"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "f897ebcf72cd16f89ab4577d0c826cd14afaafc7"
+
+[[lean_lib]]
+name = "MinimalAudit"
+srcDir = "lean"
+roots = [
+  "Core", "SRG", "Triangles", "TriangleCount", "FourDirections", "Incidence",
+  "Gram", "GramEntries", "MixedGram", "MixedEntries", "MixedConsequences",
+  "IntegralGram", "IntegralCode", "FrameContraction", "ImageAlgebra", "ImageGap",
+  "TensorLower", "TrianglePairs", "TriangleMoments", "TriangleSecondMoments",
+  "IntegerNorm", "DeltaBound", "FrameRank", "RationalLattice", "LatticeParity",
+  "LatticeStructure", "LatticeDual", "LatticeRank", "LatticeDiscriminant",
+  "LatticeQuadratic", "LatticeBidual", "LatticeSummary", "DiscriminantForm",
+  "DiscriminantNondegenerate", "FiniteWittSeven", "FiniteWittReduction",
+  "DiscriminantWittLift", "LatticeLift", "LatticeDeterminant", "LiftDeterminant",
+  "IntegerEigenNorm", "BipartiteSupportBound", "IntegerEigenMinimum", "DualMinimum",
+  "RootBiplane", "RootCode", "RootPartition", "RootEquitable", "RootHoffman",
+  "RootOrthogonality", "HoffmanCocliques", "HoffmanOrthogonalIntersection",
+  "HoffmanSingleActive", "RootCentersBound", "HoffmanCoset", "RootRankFour",
+  "RootSpanRank", "FourDirectionsCover", "FourDirectionsGeometry", "FourDirectionRootBridge",
+  "FourDirectionSignatures", "FourDirectionSignedRootBridge", "SignaturePacking",
+  "FinitePackingSearch", "ZeroCasePacking", "FourDirectionOneTriangle",
+  "FourDirectionOneNeighbors", "ProfileBudget", "ProfileGlobalBudget",
+  "FourDirectionOnePartition", "FourDirectionOneCells", "FourDirectionOneMatchings",
+  "FourDirectionOneRDegree", "FourDirectionProfiles", "FourDirectionProfileNorm",
+  "FourDirectionOneProfiles", "FourDirectionOneGlobalBudget", "FourDirectionOneArcPoint",
+  "FourDirectionOneArcDegrees", "FourDirectionOneArcGraph", "FourDirectionINeighbors",
+  "FiniteGaussWitt", "DiscriminantGaussWitt", "ZeroCaseAllPackings",
+  "ZeroCaseNeighbors", "ZeroCasePartition", "ZeroCaseRowEquations",
+  "FourDirectionArcContradiction", "FourDirectionOnlyZeroCase", "ZeroCaseSupportSizes",
+  "CanonicalDet49Lift", "ZeroCaseTripleCertificate",
+  "CoreSignatureRealization",
+  "CoreSignatureRows", "FiniteRowSearch", "MilgramIsotropicAverage", "MilgramOrthogonalSublattice",
+  "ZeroCaseSymmetry", "ZeroCaseOrbitData", "ZeroCaseOrbitCertificate", "ZeroCaseFiveOrbits",
+  "ZeroCaseNormalizedPacking", "ZeroCaseSystemSymmetry", "ZeroCaseDoubleSignatures",
+  "ZeroCaseCoreData", "ZeroCaseHighRows", "ZeroCaseHighCertificate",
+  "ZeroCaseActualHighConfiguration", "ZeroCaseResidualRows", "ZeroCaseResidualGraph",
+  "ZeroCaseHighComplete", "ZeroCaseHighForced", "ZeroCaseTripleCommon",
+  "ZeroCaseTripleGraph", "ZeroCaseOrbitFour",
+  "RootRankThree",
+  "MinimalConclusions",
+  "MilgramFiniteGluing", "MilgramOrthogonalModel",
+  "MilgramOrthogonalDiscriminant", "MilgramOrthogonalPairing", "MilgramCanonicalGluing",
+  "MilgramCyclicPhase", "MilgramOneDimensional", "MilgramDiagonalGauss",
+  "MilgramOrthogonalCoordinates", "MilgramCanonicalGauss", "CanonicalDet49LiftComplete",
+  "MilgramPhase", "MilgramTheta", "MilgramMonodromy", "MilgramSummability",
+  "MilgramFiniteGauss", "MilgramDiscriminantFourier", "MilgramClassTheta", "Main"
+]

@@ -1,0 +1,6 @@
+* text=auto eol=lf
+# Preserve audited bytes, including existing line endings, for the hash manifest.
+codex/** -text whitespace=-trailing-space,-blank-at-eof
+opus/** -text whitespace=-trailing-space,-blank-at-eof
+verification/*.md -text
+verification/sources.sha256 -text

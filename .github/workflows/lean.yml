@@ -1,0 +1,41 @@
+name: Full Lean verification (manual)
+on:
+  workflow_dispatch:
+    inputs:
+      project:
+        description: Project to verify
+        type: choice
+        options:
+          - opus
+          - codex
+        default: opus
+        required: true
+      runner:
+        description: "Runner label; Codex's finite certificate needs high memory. Use only a trusted Linux runner."
+        type: string
+        default: self-hosted
+        required: true
+permissions:
+  contents: read
+jobs:
+  lean:
+    runs-on: ${{ inputs.runner }}
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Install elan if absent (pinned installer source)
+        shell: bash
+        run: |
+          if ! command -v elan >/dev/null 2>&1 && [ ! -x "$HOME/.elan/bin/elan" ]; then
+            curl --proto '=https' --tlsv1.2 -sSf \
+              https://raw.githubusercontent.com/leanprover/elan/9605b24b08cf68b78dce0014b6fa01be1f8e2cee/elan-init.sh \
+              -o "$RUNNER_TEMP/elan-init.sh"
+            sh "$RUNNER_TEMP/elan-init.sh" -y --default-toolchain none --no-modify-path
+          fi
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - name: Build pinned project and check final axioms
+        env:
+          PROJECT: ${{ inputs.project }}
+        run: python3 scripts/verify.py --project "$PROJECT" --fetch-cache
