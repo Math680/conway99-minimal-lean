@@ -4,6 +4,8 @@ Two separately developed Lean formalizations accompanying
 *Triangle Frames and Root-Sparse Lattices for Conway's 99-Graph*
 by **Mathieu RANNOU** (mathieu.rannou@imt-atlantique.net).
 
+Both the mathematical research in the preprint and the subsequent Lean formalizations were AI-driven.
+
 [Read the preprint (PDF)](paper/Rannou_Conway99_Preprint.pdf).
 
 **This repository does not resolve Conway's 99-graph problem.** It formalizes
